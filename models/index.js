@@ -2,7 +2,7 @@ const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
 
-// users can make many posts 
+// users can make posts 
 User.hasMany(Post, {
     foreignKey: 'user_id'
 }); 
@@ -22,12 +22,12 @@ Comment.belongsTo(Post, {
     foreignKey: 'post_id'
 });
 
-// users can make many comments 
+// users can make comments 
 User.hasMany(Comment, {
     foreignKey: 'user_id'
 });
 
-// users can make many posts 
+// users can make posts 
 Post.hasMany(Comment, {
     foreignKey: 'post_id'
 });
